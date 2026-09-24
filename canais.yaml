@@ -1,0 +1,40 @@
+# Configuração de voz de cada canal.
+# O nome do canal aqui deve ser igual à linha "CANAL:" do roteiro.
+#
+#   motor:      edge (padrão, gratuito), azure ou elevenlabs
+#   voz:        nome da voz (edge/azure) ou ID da voz (elevenlabs)
+#               -> para ver as opções:  listar_vozes.bat   (ou: python -m montador vozes edge --idioma pt-BR)
+#   velocidade: "+0%" é normal; "+10%" mais rápido; "-10%" mais devagar
+#   tom:        "+0Hz" é normal; "-5Hz" mais grave; "+5Hz" mais agudo (o ElevenLabs ignora)
+#   pausa:      silêncio entre as cenas, em segundos (ex.: 0.8)
+#   modelo:     (só elevenlabs, opcional) ex.: eleven_multilingual_v2
+
+canais:
+  paper-trail:
+    motor: edge
+    voz: en-US-AndrewNeural
+    velocidade: "+0%"
+    tom: "+0Hz"
+    pausa: 0.8
+
+  antes-do-capitulo-1:
+    motor: edge
+    voz: pt-BR-AntonioNeural
+    velocidade: "+0%"
+    tom: "+0Hz"
+    pausa: 0.8
+
+  # Exemplos com os outros motores (tire o # para usar):
+  # meu-canal-azure:
+  #   motor: azure
+  #   voz: pt-BR-FranciscaNeural
+  #   velocidade: "+5%"
+  #   tom: "+0Hz"
+  #   pausa: 0.6
+  #
+  # meu-canal-elevenlabs:
+  #   motor: elevenlabs
+  #   voz: COLE_AQUI_O_ID_DA_VOZ
+  #   modelo: eleven_multilingual_v2
+  #   velocidade: "+0%"
+  #   pausa: 0.6

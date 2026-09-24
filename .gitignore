@@ -1,0 +1,15 @@
+# Chaves e segredos
+.env
+
+# Saída gerada
+episodios/
+
+# Ambiente e caches do Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ffmpeg portátil colocado na pasta do projeto
+ffmpeg/
